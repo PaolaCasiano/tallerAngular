@@ -27,7 +27,7 @@
           <mat-radio-group formControlName="gender">
             <mat-radio-button value="1">Male</mat-radio-button>
             <mat-radio-button value="2">Female</mat-radio-button>
-            <mat-radio-button value="3">Other</mat-radio-button>
+            <mat-radio-button (click)="showNotification(3)" value="3">Other</mat-radio-button>
           </mat-radio-group>
         </div>
         <mat-form-field>
@@ -48,7 +48,7 @@
         </div>
         <div class="button-row">
           <button mat-raised-button color="primary" type="submit" [disabled]="service.form.invalid">Submit</button>
-          <button mat-raised-button color="warn" (click)="onClear()">Clear</button>
+          <button mat-raised-button color="warn" (click)="openDialog()">Clear</button>
         </div>
       </div>
     </mat-grid-tile>

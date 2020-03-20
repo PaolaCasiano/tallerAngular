@@ -10,12 +10,14 @@ import { AppComponent } from './app.component';
 import { EmployeesComponent } from './employees/employees.component';
 import { EmployeeComponent } from './employees/employee/employee.component';
 import { EmployeeService } from './shared/employee.service';
+import { DialogComponent } from './shared/dialog/dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EmployeesComponent,
-    EmployeeComponent
+    EmployeeComponent,
+    DialogComponent
   ],
   imports: [
     BrowserModule,
@@ -24,6 +26,7 @@ import { EmployeeService } from './shared/employee.service';
     ReactiveFormsModule,
     BrowserAnimationsModule
   ],
+  entryComponents: [DialogComponent],
   providers: [EmployeeService],
   bootstrap: [AppComponent]
 })
